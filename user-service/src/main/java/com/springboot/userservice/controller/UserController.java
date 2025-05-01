@@ -5,9 +5,11 @@ import com.springboot.userservice.dto.UserResponse;
 import com.springboot.userservice.service.UserService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/users")
 @AllArgsConstructor
@@ -23,6 +25,10 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<UserResponse> register(@Valid @RequestBody RegisterRequest request){
+
+        log.info("Received register request: {}", request.getEmail());
+        log.info("Register endpoint hit for: {}", request.getEmail());
+
 
         return ResponseEntity.ok(userService.register(request));
     }

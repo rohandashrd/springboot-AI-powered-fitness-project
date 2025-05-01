@@ -1,11 +1,9 @@
-package com.springboot.userservice.dto;
+package com.springboot.apigateway.user;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 public class RegisterRequest {

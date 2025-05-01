@@ -1,6 +1,6 @@
-package com.springboot.userservice.dto;
+package com.springboot.apigateway.user;
 
-import com.springboot.userservice.model.UserRole;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,6 @@ public class UserResponse {
     private String password;
     private String firstName;
     private String lastName;
-    private UserRole role=UserRole.USER;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

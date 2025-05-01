@@ -25,7 +25,6 @@ public class UserValidationService {
                 throw new RuntimeException("User not found: "+userId);
             } else if (e.getStatusCode() == HttpStatus.BAD_REQUEST) {
                 throw new RuntimeException("Invalid Request: "+userId);
-                
             }
         }
         return false;
