@@ -15,12 +15,12 @@ import ActivityList from "./components/ActivityList";
 import ActivityDetail from "./components/ActivityDetail";
 
 const ActivitiesPage = () => {
-
   return (
-  <Box component="section" sx={{ p: 2, border: "1px dashed grey" }}>
-    <ActivityForm onActivitiesAdded={() => window.location.reload()} />
-    <ActivityList />
-  </Box>);
+    <Box component="section" sx={{ p: 2, border: "1px dashed grey" }}>
+      <ActivityForm onActivitiesAdded={() => window.location.reload()} />
+      <ActivityList />
+    </Box>
+  );
 };
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
         <Box component="section" sx={{ p: 2, border: "1px dashed grey" }}>
           <Routes>
             <Route path="/activities" element={<ActivitiesPage />} />
-            <Route path="/activities/:id" element={ActivityDetail} />
+            <Route path="/activities/:id" element={<ActivityDetail />} />
 
             <Route
               path="/"
